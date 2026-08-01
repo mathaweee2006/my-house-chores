@@ -24,7 +24,7 @@
 
     <script>
       // 🚨 สำคัญมาก: เอาลิงก์ Web App URL ของ Google Apps Script ที่ได้จาก Step 1 มาแปะตรงนี้ครับ
-      const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyD-YpbXJPk60Lkwez2w2I5zKohyscXlbxpe7CQgj4qZK3z4x-aurUBaSMNIb_DtxAm/exec"; 
+      const GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxBfAhCts9D0olsdkVeah1Ir1f2vFnaZRQDvj7eSrG21iknK0Utwvj35wlO4FdDFHa6/exec"; 
       let currentUserName = "";
 
       window.onload = function() {
@@ -111,6 +111,8 @@
         .then(res => res.json())
         .then(response => {
           if(response.success) {
+            alert("✨ ส่งงานเรียบร้อยแล้วจ้า! ขอบคุณที่ช่วยดูแลบ้านนะ");
+
             loadTasks(); // โหลดลิสต์ใหม่
           } else {
             alert("เกิดข้อผิดพลาด: " + response.error);
